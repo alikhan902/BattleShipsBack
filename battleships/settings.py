@@ -162,7 +162,7 @@ SESSION_COOKIE_SAMESITE = "None" # Разрешаем кросс-доменны�
 
 CSRF_COOKIE_SAMESITE = "None"
 CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_HTTPONLY = False
+CSRF_COOKIE_HTTPONLY = True
 CORS_ALLOW_METHODS = [
     "GET",
     "POST",
