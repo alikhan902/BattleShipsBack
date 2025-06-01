@@ -144,6 +144,11 @@ CSRF_TRUSTED_ORIGINS = [
     "https://battleships-front-kubfi9q92-alikhan902s-projects.vercel.app",
 ]
 
+CORS_ORIGIN_WHITELIST = [
+    'https://battleships-front-kubfi9q92-alikhan902s-projects.vercel.app',
+    'https://battleshipsback.onrender.com',
+]
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
     'content-type',  # Разрешение заголовка Content-Type
