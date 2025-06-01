@@ -157,11 +157,11 @@ CORS_ALLOW_HEADERS = [
     'Authorization',  # Разрешение заголовка Authorization для использования токенов
 ]
 APPEND_SLASH = False
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = "Lax" # Разрешаем кросс-доменные cookies
 
 CSRF_COOKIE_SAMESITE = "Lax"
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = False
 CORS_ALLOW_METHODS = [
     "GET",
