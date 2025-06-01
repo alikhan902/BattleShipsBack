@@ -9,3 +9,4 @@ pbr
 pyquery
 djangorestframework
 django-cors-headers
+gunicorn
