@@ -1,12 +1,9 @@
 # Install with: `pip install -r requirements.txt`
 
-cssselect
 django
-flake8
-lxml
-mock
-pbr
-pyquery
 djangorestframework
 django-cors-headers
 gunicorn
+flake8
+lxml  
+cssselect 
