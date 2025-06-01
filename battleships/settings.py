@@ -137,17 +137,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOWED_HOSTS = ['*']
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "https://battleships-front-kubfi9q92-alikhan902s-projects.vercel.app",
+    "https://battleships-front-25lttzwbv-alikhan902s-projects.vercel.app",
     'https://battleshipsback.onrender.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://battleships-front-kubfi9q92-alikhan902s-projects.vercel.app",
+    "https://battleships-front-25lttzwbv-alikhan902s-projects.vercel.app",
     'https://battleshipsback.onrender.com',
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'https://battleships-front-kubfi9q92-alikhan902s-projects.vercel.app',
+    'https://battleships-front-25lttzwbv-alikhan902s-projects.vercel.app',
     'https://battleshipsback.onrender.com',
 ]
 
