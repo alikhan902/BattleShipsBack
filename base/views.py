@@ -5,7 +5,10 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from .forms import UserForm
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
+@method_decorator(csrf_exempt, name='dispatch')
 class SignupAPIView(APIView):
 
     def post(self, request, *args, **kwargs):
@@ -49,7 +52,7 @@ class SignupAPIView(APIView):
                 error_messages[field] = error_list[0].message if hasattr(error_list[0], 'message') else error_list[0]
         return error_messages
 
-
+@method_decorator(csrf_exempt, name='dispatch')
 class LoginAPIView(APIView):
 
     def post(self, request, *args, **kwargs):
@@ -66,7 +69,7 @@ class LoginAPIView(APIView):
         else:
             return Response({'message': 'Неверный пароль или логин'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+@method_decorator(csrf_exempt, name='dispatch')
 class LogoutAPIView(APIView):
 
     def post(self, request, *args, **kwargs):
