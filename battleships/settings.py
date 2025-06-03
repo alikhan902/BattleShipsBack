@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
+import base
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 TEMPLATES_PATH = '{0}/templates'.format(PROJECT_ROOT)
 TEMPLATE_TAGS_PATH = '{0}/templatetags'.format(PROJECT_ROOT)
