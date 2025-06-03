@@ -141,10 +141,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://battleshipsback.onrender.com',
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://battleshipsfront.onrender.com",
-    'https://battleshipsback.onrender.com',
-]
+CSRF_TRUSTED_ORIGINS = []
 
 CORS_ORIGIN_WHITELIST = [
     'https://battleshipsfront.onrender.com',
@@ -163,9 +160,9 @@ SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = "None" # Разрешаем кросс-доменные cookies
 
 CSRF_COOKIE_SAMESITE = "None"
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = True
-CSRF_USE_SESSIONS = True
+CSRF_USE_SESSIONS = False
 CORS_ALLOW_METHODS = [
     "GET",
     "POST",
