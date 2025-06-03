@@ -104,7 +104,10 @@ DATABASES = {
 
 
 REST_FRAMEWORK = {
-    authentication_classes = (CsrfExemptSessionAuthentication, BasicAuthentication)
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
     'DEFAULT_THROTTLE_CLASSES': [],
     'DEFAULT_THROTTLE_RATES': {},
     'DEFAULT_PARSER_CLASSES': (
