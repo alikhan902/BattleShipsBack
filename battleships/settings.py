@@ -141,7 +141,10 @@ CORS_ALLOWED_ORIGINS = [
     'https://battleshipsback.onrender.com',
 ]
 
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = [
+    "https://battleshipsfront.onrender.com",
+    "https://battleshipsback.onrender.com",  # если есть бэкенд на другом домене
+]
 
 CORS_ORIGIN_WHITELIST = [
     'https://battleshipsfront.onrender.com',
