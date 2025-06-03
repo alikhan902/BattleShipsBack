@@ -142,12 +142,12 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://battleships-front-25lttzwbv-alikhan902s-projects.vercel.app",
+    "https://battleshipsfront.onrender.com",
     'https://battleshipsback.onrender.com',
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'https://battleships-front-25lttzwbv-alikhan902s-projects.vercel.app',
+    'https://battleshipsfront.onrender.com',
     'https://battleshipsback.onrender.com',
 ]
 
