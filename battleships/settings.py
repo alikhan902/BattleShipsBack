@@ -56,8 +56,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware', 
-    "django.middleware.csrf.CsrfViewMiddleware",
     'django.middleware.common.CommonMiddleware',
+    'base.middle.DisableCSRF',
     'django.contrib.auth.middleware.AuthenticationMiddleware', 
     'django.contrib.messages.middleware.MessageMiddleware', 
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -178,7 +178,7 @@ SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = "None" # Разрешаем кросс-доменные cookies
 
 CSRF_COOKIE_SAMESITE = "None"
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = True
 CORS_ALLOW_METHODS = [
     "GET",
