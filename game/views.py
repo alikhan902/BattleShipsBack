@@ -9,7 +9,11 @@ from django.shortcuts import get_object_or_404
 from .serializers import PlayerFieldSerializer, PlayerFieldUpdateSerializer, RoomSerializer, RoomSerializerOne
 from .utils import delete_room, setup_fields_for_room
 from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
+
+@method_decorator(csrf_exempt, name='dispatch')
 class CreateRoomAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -40,7 +44,8 @@ class CreateRoomAPIView(APIView):
         player_field = PlayerField.objects.filter(room=room)  # Получаем поле для игрока
         return PlayerFieldSerializer(player_field, many=True).data
     
-    
+
+@method_decorator(csrf_exempt, name='dispatch')
 class MyRoomsAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -55,6 +60,7 @@ class MyRoomsAPIView(APIView):
         # Возвращаем список комнат
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+@method_decorator(csrf_exempt, name='dispatch')
 class RoomDetailAPIView(APIView):
     def get(self, request, id_room, *args, **kwargs):
         """Получение всех данных о комнате по ID"""
@@ -67,6 +73,7 @@ class RoomDetailAPIView(APIView):
         serializer = RoomSerializerOne(room, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+@method_decorator(csrf_exempt, name='dispatch')
 class UpdateOpponentFieldAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -116,7 +123,8 @@ class UpdateOpponentFieldAPIView(APIView):
             }, status=status.HTTP_200_OK)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        
+
+@method_decorator(csrf_exempt, name='dispatch')        
 class DeleteRoomAPIView(APIView):
     def delete(self, request, id_room, *args, **kwargs):
         """Удаление комнаты по ID"""
