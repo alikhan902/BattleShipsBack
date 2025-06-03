@@ -137,7 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOWED_HOSTS = ['*']
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "https://battleships-front-25lttzwbv-alikhan902s-projects.vercel.app",
+    "https://battleshipsfront.onrender.com",
     'https://battleshipsback.onrender.com',
 ]
 
